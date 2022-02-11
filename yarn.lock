@@ -1334,6 +1334,14 @@
   dependencies:
     "@chakra-ui/utils" "1.10.2"
 
+"@chakra-ui/icons@^1.1.5":
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/icons/-/icons-1.1.5.tgz#ae727d1dab116d59d69055251a20fd4c4e7318f7"
+  integrity sha512-UjTexT3SXCNu6XbAjyHFTkYAMSq5MFTf1b5WSmvI6Bt4PZ5hYXGKGeFVaZi4jH58WCWD/HKsEq+MrHBDaaeUnA==
+  dependencies:
+    "@chakra-ui/icon" "2.0.3"
+    "@types/react" "^17.0.15"
+
 "@chakra-ui/image@1.1.5":
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/@chakra-ui/image/-/image-1.1.5.tgz#d3c988cd75dce9cae49df3eb15572112d5113594"
@@ -2965,7 +2973,7 @@
   resolved "https://registry.yarnpkg.com/@types/range-parser/-/range-parser-1.2.4.tgz#cd667bcfdd025213aafb7ca5915a932590acdcdc"
   integrity sha512-EEhsLsD6UsDM1yFhAvy0Cjr6VwmpMWqFBCb9w07wVugF7w9nfajxLuVmngTIpgS6svCnm6Vaw+MZhoDCKnOfsw==
 
-"@types/react@*":
+"@types/react@*", "@types/react@^17.0.15":
   version "17.0.39"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.39.tgz#d0f4cde092502a6db00a1cded6e6bf2abb7633ce"
   integrity sha512-UVavlfAxDd/AgAacMa60Azl7ygyQNRwC/DsHZmKgNvPmRR5p70AJ5Q9EAmL2NWOJmeV+vVUI4IAP7GZrN8h8Ug==
@@ -3178,6 +3186,15 @@
     "@web3-react/abstract-connector" "^6.0.7"
     "@web3-react/types" "^6.0.7"
     tiny-invariant "^1.0.6"
+    tiny-warning "^1.0.3"
+
+"@web3-react/injected-connector@^6.0.7":
+  version "6.0.7"
+  resolved "https://registry.yarnpkg.com/@web3-react/injected-connector/-/injected-connector-6.0.7.tgz#1e0be23f51fa07fe6547fe986768a46b74c3a426"
+  integrity sha512-Y7aJSz6pg+MWKtvdyuqyy6LWuH+4Tqtph1LWfiyVms9II9ar/9B/de4R8wh4wjg91wmHkU+D75yP09E/Soh2RA==
+  dependencies:
+    "@web3-react/abstract-connector" "^6.0.7"
+    "@web3-react/types" "^6.0.7"
     tiny-warning "^1.0.3"
 
 "@web3-react/types@^6.0.7":

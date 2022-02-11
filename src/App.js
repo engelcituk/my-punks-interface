@@ -1,23 +1,15 @@
-import { useEffect } from 'react';
+
 import { Route, Routes } from 'react-router-dom';
 import Home from './views/home';
-import Web3 from 'web3';
+import MainLayout from './layouts/main';
 
 function App() {
-  useEffect( () => {
-    if( window.ethereum ){
-      // window.ethereum.request({ method: 'eth_requestAccounts' }).then( console.log ) //version inicial
-      const web3 = new Web3(window.ethereum )
-      web3.eth.requestAccounts().then(console.log)
-    }
-  },[])
-
   return (
-    <>
-    <Routes>
-      <Route path="/" element={<Home />}/>
-    </Routes>
-    </>
+    <MainLayout>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+      </Routes>
+    </MainLayout>
   );
 }
 
