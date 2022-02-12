@@ -70,8 +70,8 @@ const useMyPunksData = () => {
                 getPunkData({ tokenId, myPunks })
             );
 
-            const punks = await Promise.all(punksPromise)
-            setPunks(punks)
+            const punksToSet = await Promise.all(punksPromise)
+            setPunks(punksToSet)
             setLoading(false)
         }
     },[myPunks]);
@@ -83,4 +83,29 @@ const useMyPunksData = () => {
     return {loading, punks, update }
 }
 
-export { useMyPunksData }
+//singular
+const useMyPunkData = (tokenId = null) => {
+    const [ punk, setPunk ] = useState({})
+    const[ loading, setLoading ] = useState(true)
+    const myPunks = useMyPunks()
+
+    const update = useCallback( async () => {
+        if( myPunks && tokenId != null ){
+            setLoading(true)
+            
+            const punkToSet = await getPunkData({ tokenId, myPunks })
+
+            setPunk(punkToSet)
+            setLoading(false)
+        }
+    },[myPunks, tokenId]);
+
+    useEffect( () => {
+        update();
+    },[update]);
+
+    return {loading, punk, update }
+
+}
+
+export { useMyPunksData, useMyPunkData }
