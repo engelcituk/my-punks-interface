@@ -44,29 +44,29 @@ const Home = () => {
         })
         .on('transactionHash', (txHash) => {
             toast({
-                title: 'Transacción enviada.',
-                description: txHash,
-                status: 'info',
-                isClosable: true,
+              title: 'Transacción enviada.',
+              description: txHash,
+              status: 'info',
+              isClosable: true,
             })
         })
         .on('receipt', () => {
             setIsMintig(false)
             toast({
-                title: 'Transacción confirmada.',
-                description: 'La ha transacción ha sido confirmada',
-                status: 'success',
-                isClosable: true,
+              title: 'Transacción confirmada.',
+              description: 'La ha transacción ha sido confirmada',
+              status: 'success',
+              isClosable: true,
             })
 
         })
         .on('error', (error) => {
             setIsMintig(false)
             toast({
-                title: 'Transacción fallida.',
-                description: error.message,
-                status: 'error',
-                isClosable: true,
+              title: 'Transacción fallida.',
+              description: error.message,
+              status: 'error',
+              isClosable: true,
             })
 
         })
